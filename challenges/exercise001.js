@@ -15,12 +15,18 @@ export function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
   // Add your code here!
+  let firstInitial = firstName.charAt(0);
+  let lastInitial = lastName.charAt(0);
+  return firstInitial + "." + lastInitial;
 }
 
 export function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
   // Add your code here!
+  let finalPrice = originalPrice + (vatRate / 100) * originalPrice;
+  if (!Number.isInteger(finalPrice)) return parseFloat(finalPrice.toFixed(2));
+  else return finalPrice;
 }
 
 export function getSalePrice(originalPrice, reduction) {
