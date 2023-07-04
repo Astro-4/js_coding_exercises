@@ -33,6 +33,9 @@ export function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
   // Add your code here!
+  let finalPrice = originalPrice - (reduction / 100) * originalPrice;
+  if (!Number.isInteger(finalPrice)) return parseFloat(finalPrice.toFixed(2));
+  else return finalPrice;
 }
 
 export function getMiddleCharacter(str) {
