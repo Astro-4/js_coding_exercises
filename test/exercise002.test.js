@@ -107,7 +107,7 @@ describe("countSheep", () => {
 });
 //Done
 describe("hasMPostCode", () => {
-  test.only("returns true if the person has a postcode starting with M", () => {
+  test("returns true if the person has a postcode starting with M", () => {
     const person = {
       name: "Mohammed",
       age: 23,
@@ -120,7 +120,7 @@ describe("hasMPostCode", () => {
     expect(hasMPostCode(person)).toBe(true);
   });
 
-  test.only("returns false if the person does not have a postcode starting with M", () => {
+  test("returns false if the person does not have a postcode starting with M", () => {
     const person = {
       name: "Anisa",
       age: 39,
@@ -133,7 +133,7 @@ describe("hasMPostCode", () => {
     expect(hasMPostCode(person)).toBe(false);
   });
 
-  test.only("returns false if the postcode starts with M but is not for Manchester", () => {
+  test("returns false if the postcode starts with M but is not for Manchester", () => {
     const person = {
       name: "Jahin",
       age: 55,
@@ -146,3 +146,4 @@ describe("hasMPostCode", () => {
     expect(hasMPostCode(person)).toBe(false);
   });
 });
+//Done
