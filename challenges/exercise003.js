@@ -11,6 +11,15 @@ export function getSquares(nums) {
 export function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Your code here!
+  let camelWord = words[0].toLowerCase();
+
+  for (let i = 1; i < words.length; i++) {
+    let firstLetterCapWord =
+      words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    camelWord += firstLetterCapWord;
+  }
+
+  return camelWord;
 }
 
 export function getTotalSubjects(people) {
