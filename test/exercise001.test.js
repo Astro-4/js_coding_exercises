@@ -76,17 +76,17 @@ describe("getMiddleCharacter", () => {
 });
 //Done
 describe("reverseWord", () => {
-  test.only("returns the provided word, reversed", () => {
+  test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
 
-  test.only("returns a longer sentence, reversed", () => {
+  test("returns a longer sentence, reversed", () => {
     expect(reverseWord("why would you even want to do this?")).toBe(
       "?siht od ot tnaw neve uoy dluow yhw"
     );
   });
 });
-
+//Done
 describe("reverseAllWords", () => {
   test("reverses a single word in an array", () => {
     expect(reverseAllWords(["jest"])).toEqual(["tsej"]);
@@ -98,7 +98,7 @@ describe("reverseAllWords", () => {
     ).toEqual(["tsej", "ahcom", "cepsr", "enimsaj", "muineles"]);
   });
 });
-
+//Done
 describe("countLinuxUsers", () => {
   test("returns 0 if no Linux users found", () => {
     const users = [
@@ -123,7 +123,7 @@ describe("countLinuxUsers", () => {
     expect(countLinuxUsers(users)).toBe(5);
   });
 });
-
+//Done
 describe("getMeanScore", () => {
   test("returns the mean score from an array of scores", () => {
     expect(getMeanScore([8, 9, 7])).toBe(8);
@@ -134,7 +134,7 @@ describe("getMeanScore", () => {
     expect(getMeanScore([24, 44, 56, 11, 12, 17, 34])).toBe(28.29);
   });
 });
-
+//Done
 describe("simpleFizzBuzz", () => {
   test("returns 'fizz' if the number is divisible by 3", () => {
     expect(simpleFizzBuzz(3)).toBe("fizz");
@@ -152,3 +152,4 @@ describe("simpleFizzBuzz", () => {
     expect(simpleFizzBuzz(15)).toBe("fizzbuzz");
   });
 });
+//Done

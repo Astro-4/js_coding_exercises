@@ -59,28 +59,42 @@ export function reverseWord(word) {
 export function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Add your code here!
-  let reversedArray = [];
-  let reversedWords = "";
-  for (i = 0; i < words.length; i++) {
-    for (var j = words.length - 1; j >= 0; j--) {
-      reversedWords += words[j];
-    }
-    reversedArray.push(reversedWords);
-  }
+  let reversedArray = words.map(function (word) {
+    return word.split("").reverse().join("");
+  });
+
   return reversedArray;
 }
 
 export function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   // Add your code here!
+  let count = 0;
+  users.forEach((user) => {
+    if (user.type === "Linux") {
+      count++;
+    }
+  });
+  return count;
 }
 
 export function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
   // Add your code here!
+  let totalScore = 0;
+  scores.forEach((score) => {
+    totalScore = totalScore + score;
+  });
+  let meanScore = totalScore / scores.length;
+  if (!Number.isInteger(meanScore)) return parseFloat(meanScore.toFixed(2));
+  else return meanScore;
 }
 
 export function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // Add your code here!
+  if (n % 5 === 0 && n % 3 === 0) return "fizzbuzz";
+  else if (n % 5 === 0) return "buzz";
+  else if (n % 3 === 0) return "fizz";
+  else return n;
 }
