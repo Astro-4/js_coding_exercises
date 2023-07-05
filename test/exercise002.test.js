@@ -26,7 +26,7 @@ describe("getFillings", () => {
 //Done
 
 describe("isFromManchester", () => {
-  test.only("returns true if the person is from Manchester", () => {
+  test("returns true if the person is from Manchester", () => {
     const person = {
       name: "Mohammed",
       city: "Manchester",
@@ -35,7 +35,7 @@ describe("isFromManchester", () => {
     expect(isFromManchester(person)).toBe(true);
   });
 
-  test.only("returns false if the person is not Manchester", () => {
+  test("returns false if the person is not Manchester", () => {
     const person = {
       name: "Anisa",
       city: "Leeds",
@@ -44,7 +44,7 @@ describe("isFromManchester", () => {
     expect(isFromManchester(person)).toBe(false);
   });
 });
-
+//Done
 describe("getBusNumbers", () => {
   // A bus can hold 40 people. This function should return how many buses are required for the number of people
   test("returns 1 if all the people fit in 1 bus", () => {
@@ -73,7 +73,7 @@ describe("getBusNumbers", () => {
     expect(getBusNumbers(43728)).toBe(1094);
   });
 });
-
+//Done
 describe("countSheep", () => {
   test("returns 0 if there are 0 sheep in the array", () => {
     const arr = ["dog", "badger", "dog", "dog", "chicken"];
