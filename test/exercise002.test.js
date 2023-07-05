@@ -75,22 +75,22 @@ describe("getBusNumbers", () => {
 });
 //Done
 describe("countSheep", () => {
-  test("returns 0 if there are 0 sheep in the array", () => {
+  test.only("returns 0 if there are 0 sheep in the array", () => {
     const arr = ["dog", "badger", "dog", "dog", "chicken"];
     expect(countSheep(arr)).toBe(0);
   });
 
-  test("returns 1 if there is 1 sheep in the array", () => {
+  test.only("returns 1 if there is 1 sheep in the array", () => {
     const arr = ["dog", "sheep", "dog", "dog", "chicken"];
     expect(countSheep(arr)).toBe(1);
   });
 
-  test("returns 2 if there are 2 sheep in the array", () => {
+  test.only("returns 2 if there are 2 sheep in the array", () => {
     const arr = ["dog", "sheep", "dog", "sheep", "chicken"];
     expect(countSheep(arr)).toBe(2);
   });
 
-  test("returns 5 if there are 5 sheep in the array", () => {
+  test.only("returns 5 if there are 5 sheep in the array", () => {
     const arr = [
       "dog",
       "sheep",
