@@ -49,11 +49,25 @@ export function getMiddleCharacter(str) {
 export function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   // Add your code here!
+  let reversedWord = "";
+  for (var i = word.length - 1; i >= 0; i--) {
+    reversedWord += word[i];
+  }
+  return reversedWord;
 }
 
 export function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   // Add your code here!
+  let reversedArray = [];
+  let reversedWords = "";
+  for (i = 0; i < words.length; i++) {
+    for (var j = words.length - 1; j >= 0; j--) {
+      reversedWords += words[j];
+    }
+    reversedArray.push(reversedWords);
+  }
+  return reversedArray;
 }
 
 export function countLinuxUsers(users) {
