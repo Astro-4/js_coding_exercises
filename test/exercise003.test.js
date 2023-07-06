@@ -71,7 +71,7 @@ describe("getTotalSubjects", () => {
     expect(getTotalSubjects(people)).toBe(9);
   });
 });
-
+//Done
 describe("checkIngredients", () => {
   test("returns false if no menu items include the specified ingredient", () => {
     const menu = [
