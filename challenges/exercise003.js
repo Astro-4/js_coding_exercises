@@ -36,6 +36,13 @@ export function checkIngredients(menu, ingredient) {
   if (menu === undefined) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
+
+  let ingredientUsed = false;
+  menu.forEach((dish) => {
+    if (Object.values(dish.ingredients).includes(ingredient))
+      ingredientUsed = true;
+  });
+  return ingredientUsed;
 }
 
 export function duplicateNumbers(arr1, arr2) {
