@@ -163,3 +163,4 @@ describe("duplicateNumbers", () => {
     expect(duplicateNumbers(arr1, arr2)).toEqual([3]);
   });
 });
+//Done
