@@ -59,14 +59,14 @@ describe("findVerbs", () => {
 });
 // Done
 describe("getIntegers", () => {
-  test.only("returns an array containing only integers", () => {
+  test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);
     expect(getIntegers([])).toEqual([]);
     expect(getIntegers([4.9, 9.33, 12.4])).toEqual([]);
   });
 });
-
+//Done
 describe("getCities", () => {
   test("returns an array of the cities of each user", () => {
     const users = [
@@ -110,7 +110,7 @@ describe("getCities", () => {
     expect(getCities(users)).toEqual(["MCR", "LVP", "LVP", "GLW"]);
   });
 });
-
+//Done
 describe("getSquareRoots", () => {
   test("gets the square root of each number to 2 decimal places", () => {
     const nums = [36, 77, 12, 355, 92, 5];
