@@ -70,6 +70,12 @@ export function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
   // Your code here
+  let fullSentence = [];
+  for (let i = 0; i < sentences.length; i++) {
+    if (sentences[i].toLowerCase().includes(str.toLowerCase()))
+      fullSentence.push(sentences[i]);
+  }
+  return fullSentence;
 }
 
 export function getLongestSides(triangles) {
