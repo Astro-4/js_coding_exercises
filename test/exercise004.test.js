@@ -32,7 +32,7 @@ describe("findNamesBeginningWith", () => {
 });
 //Done
 describe("findVerbs", () => {
-  test("returns an array of words that are considered verbs (because they begin with 'to ')", () => {
+  test.only("returns an array of words that are considered verbs (because they begin with 'to ')", () => {
     const words = [
       "to eat",
       "fajita",
@@ -45,7 +45,7 @@ describe("findVerbs", () => {
     expect(findVerbs(["bottle", "fish", "grain"])).toEqual([]);
   });
 
-  test("does not mistake words that include 'to' elsewhere", () => {
+  test.only("does not mistake words that include 'to' elsewhere", () => {
     const words = [
       "to eat",
       "tower",
@@ -57,7 +57,7 @@ describe("findVerbs", () => {
     expect(findVerbs(words)).toEqual(["to eat", "to sneak", "to squeak"]);
   });
 });
-
+// Done
 describe("getIntegers", () => {
   test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
