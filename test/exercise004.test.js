@@ -117,7 +117,7 @@ describe("getSquareRoots", () => {
     expect(getSquareRoots(nums)).toEqual([6, 8.77, 3.46, 18.84, 9.59, 2.24]);
   });
 });
-
+//Done
 describe("findSentencesContaining", () => {
   const sentencesAboutPackageJson = [
     "You should specify a license for your package so that people know how they are permitted to use it",
