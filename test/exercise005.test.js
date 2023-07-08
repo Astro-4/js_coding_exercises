@@ -51,7 +51,7 @@ describe("count1sand0s", () => {
     });
   });
 });
-
+//Done
 describe("reverseNumber", () => {
   test("reverses the digits of a number", () => {
     expect(reverseNumber(5)).toBe(5);
