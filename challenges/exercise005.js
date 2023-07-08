@@ -28,6 +28,9 @@ export const count1sand0s = (str) => {
 export const reverseNumber = (n) => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
+  let reverseStringNum = n.toString().split("").reverse().join("");
+  let reverseNumber = parseInt(reverseStringNum, 10);
+  return reverseNumber;
 };
 
 export const sumArrays = (arrs) => {

@@ -60,7 +60,7 @@ describe("reverseNumber", () => {
     expect(reverseNumber(100)).toBe(1); // No leading 0 necessary
   });
 });
-
+//Done
 describe("sumArrays", () => {
   test("returns the total of the numbers in all sub arrays", () => {
     const arrs = [[1, 2, 3], [6, 3, 1], [1], [9, 10], [3, 5]];
