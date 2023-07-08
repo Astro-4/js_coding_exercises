@@ -28,7 +28,7 @@ export const count1sand0s = (str) => {
 export const reverseNumber = (n) => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
-  let reversestrNum = n.tostr().split("").reverse().join("");
+  let reversestrNum = n.toString().split("").reverse().join("");
   let reverseNumber = parseInt(reversestrNum, 10);
   return reverseNumber;
 };
@@ -60,11 +60,12 @@ export const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
   // Your code here!
+  let searchString = searchTerm.toLowerCase();
   for (let key in haystack) {
     if (
       haystack.hasOwnProperty(key) &&
-      typeof haystack[key] === "str" &&
-      haystack[key].includes(searchTerm)
+      typeof haystack[key] === "string" &&
+      haystack[key].toLowerCase().includes(searchString)
     ) {
       return true;
     }
