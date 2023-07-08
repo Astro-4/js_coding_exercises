@@ -28,8 +28,8 @@ export const count1sand0s = (str) => {
 export const reverseNumber = (n) => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
-  let reverseStringNum = n.toString().split("").reverse().join("");
-  let reverseNumber = parseInt(reverseStringNum, 10);
+  let reversestrNum = n.tostr().split("").reverse().join("");
+  let reverseNumber = parseInt(reversestrNum, 10);
   return reverseNumber;
 };
 
@@ -63,7 +63,7 @@ export const findNeedle = (haystack, searchTerm) => {
   for (let key in haystack) {
     if (
       haystack.hasOwnProperty(key) &&
-      typeof haystack[key] === "string" &&
+      typeof haystack[key] === "str" &&
       haystack[key].includes(searchTerm)
     ) {
       return true;
@@ -76,4 +76,19 @@ export const findNeedle = (haystack, searchTerm) => {
 export const getWordFrequencies = (str) => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
+  let words = str.toLowerCase().split(/\W+/);
+  let frequencies = {};
+
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    if (word !== "") {
+      if (frequencies[word]) {
+        frequencies[word]++;
+      } else {
+        frequencies[word] = 1;
+      }
+    }
+  }
+
+  return frequencies;
 };

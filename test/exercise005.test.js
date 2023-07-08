@@ -140,7 +140,7 @@ describe("findNeedle", () => {
 });
 //Done
 describe("getWordFrequencies", () => {
-  test("returns the frequencies of each word in a string", () => {
+  test.only("returns the frequencies of each word in a string", () => {
     expect(getWordFrequencies("hello world")).toEqual({
       hello: 1,
       world: 1,
@@ -160,13 +160,13 @@ describe("getWordFrequencies", () => {
     });
   });
 
-  test("ignores capitalisation", () => {
+  test.only("ignores capitalisation", () => {
     expect(getWordFrequencies("Hello hello hello")).toEqual({
       hello: 3,
     });
   });
 
-  test("ignores punctuation", () => {
+  test.only("ignores punctuation", () => {
     // Hint: Google "JavaScript remove special characters from string" to get some ideas!
     expect(
       getWordFrequencies("Hello, hello hello! What have we here?")
