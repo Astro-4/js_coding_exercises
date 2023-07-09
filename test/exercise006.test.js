@@ -20,12 +20,30 @@ describe("sumMultiples", () => {
 });
 //Done
 describe("isValidDNA", () => {
-  test.only("receive a string of characters and should return true/false depending on whether it is a valid DNA string.", () => {
+  test("receive a string of characters and should return true/false depending on whether it is a valid DNA string.", () => {
     expect(isValidDNA("CACACA")).toBe(true);
     expect(isValidDNA("AAAAAGT")).toBe(true);
     expect(isValidDNA("GTAGTB")).toBe(false);
   });
-  test.only("should not be case sensitive.", () => {
+  test("should not be case sensitive.", () => {
     expect(isValidDNA("gta")).toBe(true);
+  });
+});
+//Done
+describe("getComplementaryDNA", () => {
+  test("receive a valid DNA string (see above) and should return a string of the complementary base pairs. In DNA, T always pairs with A, and C always pairs with G.", () => {
+    expect(getComplementaryDNA("ACTG")).toBe("TGAC");
+    expect(getComplementaryDNA("CACACA")).toBe("GTGTGT");
+  });
+  test("should not be case sensitive.", () => {
+    expect(getComplementaryDNA("gtac")).toBe("CATG");
+  });
+});
+//Done
+describe("isItPrime", () => {
+  test("receive a number and return true/false depending on whether it is a prime number or not.", () => {
+    expect(isItPrime(7)).toBe(true);
+    expect(isItPrime(8)).toBe(false);
+    expect(isItPrime(0)).toBe(false);
   });
 });

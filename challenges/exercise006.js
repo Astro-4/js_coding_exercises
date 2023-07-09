@@ -47,6 +47,23 @@ export const isValidDNA = (str) => {
  */
 export const getComplementaryDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  let compString = "";
+
+  for (let i = 0; i < str.length; i++) {
+    let character = str.charAt(i).toUpperCase();
+
+    if (character === "A") {
+      compString += "T";
+    } else if (character === "T") {
+      compString += "A";
+    } else if (character === "C") {
+      compString += "G";
+    } else if (character === "G") {
+      compString += "C";
+    }
+  }
+
+  return compString;
 };
 
 /**
@@ -56,6 +73,16 @@ export const getComplementaryDNA = (str) => {
  */
 export const isItPrime = (n) => {
   if (n === undefined) throw new Error("n is required");
+  if (n < 2) {
+    return false;
+  }
+  let sqrt = Math.sqrt(n);
+  for (let i = 2; i <= sqrt; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
 /**
