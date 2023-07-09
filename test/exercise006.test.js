@@ -47,3 +47,56 @@ describe("isItPrime", () => {
     expect(isItPrime(0)).toBe(false);
   });
 });
+//Done
+describe("createMatrix", () => {
+  test("receive a number and return an array of n arrays, each filled with n items. The parameter fill should be used as the filler of the arrays.", () => {
+    expect(createMatrix(3, "fart")).toEqual([
+      ["fart", "fart", "fart"],
+      ["fart", "fart", "fart"],
+      ["fart", "fart", "fart"],
+    ]);
+    expect(createMatrix(2, 5)).toEqual([
+      [5, 5],
+      [5, 5],
+    ]);
+    expect(createMatrix(-1, "Dog")).toEqual([]);
+  });
+});
+//Done
+describe("areWeCovered", () => {
+  test("return true/false depending on whether there are enough staff scheduled for the given day from an array of staff objects.", () => {
+    expect(
+      areWeCovered(
+        [
+          { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
+          {
+            name: "Pedro",
+            rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"],
+          },
+          {
+            name: "Emily",
+            rota: ["Monday", "Tuesday", "Thursday", "Saturday"],
+          },
+        ],
+        "Wednesday"
+      )
+    ).toBe(false);
+    expect(
+      areWeCovered(
+        [
+          { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
+          {
+            name: "Pedro",
+            rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"],
+          },
+          {
+            name: "Emily",
+            rota: ["Monday", "Tuesday", "Thursday", "Saturday"],
+          },
+        ],
+        "Tuesday"
+      )
+    ).toBe(true);
+  });
+});
+//Done

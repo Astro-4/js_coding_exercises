@@ -99,6 +99,15 @@ export const isItPrime = (n) => {
 export const createMatrix = (n, fill) => {
   if (n === undefined) throw new Error("n is required");
   if (fill === undefined) throw new Error("fill is required");
+  let matrixArr = [];
+  for (let i = 0; i < n; i++) {
+    let internalArr = [];
+    for (let j = 0; j < n; j++) {
+      internalArr.push(fill);
+    }
+    matrixArr.push(internalArr);
+  }
+  return matrixArr;
 };
 
 /**
@@ -107,6 +116,7 @@ export const createMatrix = (n, fill) => {
  *  { name: "Sally", rota: ["Monday", "Tuesday", "Friday"] },
  *  { name: "Pedro", rota: ["Saturday", "Sunday", "Tuesday", "Wednesday"] },
  *  ...etc
+ *
  * ]
  * and a day of the week. For the café to run successfully, at least 3 staff members are required per day. The function should return true/false depending on whether there are enough staff scheduled for the given day.
  * @param {Array} staff
@@ -116,4 +126,15 @@ export const createMatrix = (n, fill) => {
 export const areWeCovered = (staff, day) => {
   if (staff === undefined) throw new Error("staff is required");
   if (day === undefined) throw new Error("day is required");
+  let staffCount = 0;
+
+  for (let i = 0; i < staff.length; i++) {
+    let staffMember = staff[i];
+
+    if (staffMember.rota.includes(day)) {
+      staffCount++;
+    }
+  }
+
+  return staffCount >= 3;
 };
