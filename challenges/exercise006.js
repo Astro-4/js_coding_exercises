@@ -26,6 +26,18 @@ export const sumMultiples = (arr) => {
  */
 export const isValidDNA = (str) => {
   if (str === undefined) throw new Error("str is required");
+  for (let i = 0; i < str.length; i++) {
+    let character = str.charAt(i).toUpperCase();
+    if (
+      character !== "C" &&
+      character !== "G" &&
+      character !== "T" &&
+      character !== "A"
+    ) {
+      return false;
+    }
+  }
+  return true;
 };
 
 /**

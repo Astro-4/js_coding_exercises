@@ -18,3 +18,14 @@ describe("sumMultiples", () => {
     expect(sumMultiples([])).toBe(0);
   });
 });
+//Done
+describe("isValidDNA", () => {
+  test.only("receive a string of characters and should return true/false depending on whether it is a valid DNA string.", () => {
+    expect(isValidDNA("CACACA")).toBe(true);
+    expect(isValidDNA("AAAAAGT")).toBe(true);
+    expect(isValidDNA("GTAGTB")).toBe(false);
+  });
+  test.only("should not be case sensitive.", () => {
+    expect(isValidDNA("gta")).toBe(true);
+  });
+});
